@@ -4,6 +4,7 @@ import { Button } from '../ui/button'
 import TooltipButton from '../tooltip-button'
 import DrawerButton from '../drawer-button'
 import DropdownMenuButton from '../dropdown-menu-button'
+import { Link } from 'react-router'
 
 const Header = () => {
   return (
@@ -37,24 +38,27 @@ const Header = () => {
               </TooltipButton>
             }
           />
+          <Link to={'sign-up'}>
+            <Button
+              className='cursor-pointer rounded-full px-3 py-2 font-medium hover:opacity-85'
+              size={'sm'}
+            >
+              <span>
+                <UserIcon className='size-4' />
+              </span>{' '}
+              Sign up
+            </Button>
+          </Link>
 
-          <Button
-            className='cursor-pointer rounded-full px-3 py-2 font-medium hover:opacity-85'
-            size={'sm'}
-          >
-            <span>
-              <UserIcon className='size-4' />
-            </span>{' '}
-            Sign up
-          </Button>
-
-          <Button
-            className='hidden cursor-pointer rounded-full px-3 py-2 font-medium hover:opacity-85 sm:flex'
-            size={'sm'}
-            variant={'outline'}
-          >
-            Sign in
-          </Button>
+          <Link to={'sign-in'}>
+            <Button
+              className='hidden cursor-pointer rounded-full px-3 py-2 font-medium hover:opacity-85 sm:flex'
+              size={'sm'}
+              variant={'outline'}
+            >
+              Sign in
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
