@@ -10,7 +10,11 @@ const Header = () => {
     <div className='flex h-16 items-center justify-between px-3'>
       <div>
         <a href='/'>
-          <GrokIcon className='fill-black opacity-80 hover:opacity-100 dark:fill-white [&>#furigana]:opacity-60 [&>#mark]:block [&>path]:hidden sm:[&>path]:block' />
+          <GrokIcon
+            width={88}
+            height={33}
+            className='fill-black opacity-80 hover:opacity-100 dark:fill-white [&>#furigana]:opacity-60 [&>#mark]:block [&>path]:hidden sm:[&>path]:block'
+          />
         </a>
       </div>
 

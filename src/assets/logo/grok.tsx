@@ -1,12 +1,14 @@
 type GrokIconProps = {
   className?: string
+  width?: number
+  height?: number
 }
 
-const GrokIcon = ({ className }: GrokIconProps) => {
+const GrokIcon = ({ className, width, height }: GrokIconProps) => {
   return (
     <svg
-      width='88'
-      height='33'
+      width={width}
+      height={height}
       viewBox='0 0 88 33'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'

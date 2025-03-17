@@ -41,7 +41,7 @@ const ChatLayout = () => {
       </div>
 
       {/* textarea */}
-      <div className='w-full max-w-2xl rounded-2xl border bg-white p-1 shadow sm:p-2 lg:w-4/5'>
+      <div className='w-full max-w-2xl rounded-2xl border bg-white p-1 shadow-sm focus-within:ring focus-within:ring-gray-400 hover:ring hover:ring-gray-300 sm:p-2 lg:w-4/5'>
         <div>
           <Textarea className='max-h-80 w-full resize-none border-none shadow-none focus:outline-none focus-visible:ring-0' />
         </div>

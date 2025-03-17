@@ -1,13 +1,8 @@
-import ChatLayout from './components/chat-layout'
-import Header from './components/header'
+import { RouterProvider } from 'react-router'
+import router from './router'
 
 function App() {
-  return (
-    <div className=''>
-      <Header />
-      <ChatLayout />
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
