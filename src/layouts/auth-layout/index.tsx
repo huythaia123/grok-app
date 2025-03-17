@@ -3,7 +3,7 @@ import GrokIcon from '@/assets/logo/grok'
 import XIcon from '@/assets/logo/x'
 import { Button } from '@/components/ui/button'
 import { AppleIcon } from 'lucide-react'
-import { Outlet } from 'react-router'
+import { Link, Outlet } from 'react-router'
 
 const AuthLayout = () => {
   return (
@@ -13,11 +13,13 @@ const AuthLayout = () => {
           <div className='flex h-full w-full flex-col items-center justify-between overflow-y-auto bg-[#F8F7F5] align-middle sm:px-4 dark:bg-[hsla(217,4%,12%,1)]'>
             <div className='my-8'></div>
             <div className='flex flex-col items-center justify-center align-middle'>
-              <GrokIcon
-                className='mt-3 mb-6 text-black dark:text-white'
-                width={160}
-                height={80}
-              />
+              <Link to={'/'}>
+                <GrokIcon
+                  className='mt-3 mb-6 text-black dark:text-white'
+                  width={160}
+                  height={80}
+                />
+              </Link>
               <div className='flex flex-col items-center justify-center gap-3'>
                 <Button
                   variant={'outline'}
