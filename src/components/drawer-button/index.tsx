@@ -8,11 +8,12 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
-import { Button } from '@/components/ui/button'
-import React from 'react'
-
-type DrawerButtonProps = { button?: React.ReactNode; className?: string }
-const DrawerButton = ({ button, className }: DrawerButtonProps) => {
+type DrawerButtonProps = {
+  button?: React.ReactNode
+  className?: string
+  content?: React.ReactNode
+}
+const DrawerButton = ({ button, className, content }: DrawerButtonProps) => {
   return (
     <div className={className}>
       <Drawer>
@@ -20,14 +21,18 @@ const DrawerButton = ({ button, className }: DrawerButtonProps) => {
 
         <DrawerContent>
           <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-            <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            <DrawerTitle>{/* Are you absolutely sure? */}</DrawerTitle>
+            <DrawerDescription>
+              {/* This action cannot be undone. */}
+            </DrawerDescription>
           </DrawerHeader>
 
+          {content}
+
           <DrawerFooter>
-            <Button>Submit</Button>
+            {/* <Button>Submit</Button> */}
             <DrawerClose>
-              <Button variant='outline'>Cancel</Button>
+              {/* <Button variant='outline'>Cancel</Button> */}
             </DrawerClose>
           </DrawerFooter>
         </DrawerContent>

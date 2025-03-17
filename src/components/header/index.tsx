@@ -1,10 +1,12 @@
 import GrokIcon from '@/assets/logo/grok'
-import { CogIcon, TextSearchIcon, UserIcon } from 'lucide-react'
+import { CogIcon, Search, TextSearchIcon, UserIcon } from 'lucide-react'
 import { Button } from '../ui/button'
 import TooltipButton from '../tooltip-button'
 import DrawerButton from '../drawer-button'
 import DropdownMenuButton from '../dropdown-menu-button'
 import { Link } from 'react-router'
+import { Input } from '../ui/input'
+import { Label } from '../ui/label'
 
 const Header = () => {
   return (
@@ -26,6 +28,36 @@ const Header = () => {
               <TooltipButton icon={<TextSearchIcon className='size-5' />}>
                 History
               </TooltipButton>
+            }
+            content={
+              <div className='flex flex-col gap-6'>
+                <div className='relative cursor-text'>
+                  <Input
+                    placeholder='Search ...'
+                    className='border-none pr-14 shadow-none focus-visible:ring-0'
+                    type='text'
+                  />
+                  <div className='border'></div>
+                  <Button
+                    variant={'ghost'}
+                    className='absolute top-1/2 right-0 w-14 -translate-y-1/2 cursor-pointer text-gray-500'
+                  >
+                    <Search />
+                  </Button>
+                </div>
+                <div className='p-2'>
+                  <div>
+                    <Label className='text-sm text-gray-500'>History</Label>
+                  </div>
+                  <div className='flex items-center justify-center'>
+                    <Link to={'sign-in'}>
+                      <Button variant={'ghost'}>
+                        Sign in to see your history
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             }
           />
         </div>
