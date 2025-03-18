@@ -32,7 +32,7 @@ const ChatLayout = () => {
   }
 
   return (
-    <div className='container mx-auto flex min-h-full flex-col items-center justify-center gap-6 p-2 sm:gap-9'>
+    <div className='container mx-auto flex h-screen min-h-full flex-col items-center justify-center gap-6 p-2 sm:gap-9'>
       <div className='max-w-2xl lg:w-4/5'>
         <h1 className='flex w-full flex-col items-center text-center text-2xl sm:text-3xl'>
           Welcome to Grok.{' '}
