@@ -1,11 +1,12 @@
-import ChatLayout from '@/components/chat-layout'
 import Header from '@/components/header'
 import { Outlet } from 'react-router'
 
 const HomePage = () => {
   return (
     <div>
-      <Header />
+      <div className='fixed top-0 right-0 left-0'>
+        <Header />
+      </div>
       <Outlet />
     </div>
   )

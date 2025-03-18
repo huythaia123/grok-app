@@ -10,7 +10,7 @@ import { Label } from '../ui/label'
 
 const Header = () => {
   return (
-    <div className='flex h-16 items-center justify-between px-3'>
+    <div className='z-0 flex h-16 items-center justify-between px-3'>
       <div>
         <a href='/'>
           <GrokIcon
@@ -20,6 +20,8 @@ const Header = () => {
           />
         </a>
       </div>
+
+      <div className='flex-1 bg-transparent'></div>
 
       <div className='flex gap-1'>
         <div>
