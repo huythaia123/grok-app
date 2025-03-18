@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import ChatTextarea from '../chat-textarea'
 import ChatMessageHistory from './chat-message-history'
-import { useParams } from 'react-router'
 
 export interface Message {
   role: string
@@ -11,7 +10,6 @@ export interface Message {
 const ChatLayoutMessage = () => {
   const [chatMessage, setChatMessage] = useState<string>('')
   const [isSubmit, setIsSubmit] = useState(false)
-  const params = useParams()
 
   const [messages, setMessages] = useState<Message[]>([])
 

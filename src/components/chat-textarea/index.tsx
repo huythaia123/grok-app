@@ -6,7 +6,6 @@ import DropdownMenuButton from '../dropdown-menu-button'
 import { useParams } from 'react-router'
 import instance from '@/configs/instance'
 import { Message } from '../chat-layout/chat-layout-message'
-import { useEffect } from 'react'
 
 type ChatTextareaProps = {
   className?: string
@@ -31,20 +30,21 @@ const ChatTextarea = ({
 
   const handleSubmitChat = async () => {
     // call api post chat
+
+    const response = await instance.post('/api/chat', {
+      chat_id,
+      message: chatMessage,
+    })
+
+    setMessages([
+      ...messages,
+      {
+        role: response.data?.chat.role,
+        content: response.data?.chat.content,
+      },
+    ])
+
     if (!isSubmit) {
-      const response = await instance.post('/api/chat', {
-        chat_id,
-        message: chatMessage,
-      })
-
-      setMessages([
-        ...messages,
-        {
-          role: response.data?.role,
-          content: response.data?.content,
-        },
-      ])
-
       setIsSubmit(!isSubmit)
       setChatMessage('')
     }

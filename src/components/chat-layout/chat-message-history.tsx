@@ -1,5 +1,5 @@
 import instance from '@/configs/instance'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { useParams } from 'react-router'
 
 interface ChatHistoryRes {
@@ -48,18 +48,9 @@ const ChatMessageHistory = ({
     _()
   }, [isSubmit, message, messages, setIsSubmit, setMessages])
 
-  // useLayoutEffect(() => {
-  //   console.log(messages)
-  // }, [messages])
-
   return (
     <div className='z-30 flex min-h-screen justify-center'>
       <div className='flex w-[800px] flex-col pb-48'>
-        {/* Header (tùy chọn) */}
-        {/* <div className='rounded-t-lg bg-blue-500 p-4 text-white'>
-          <h1 className='text-lg font-semibold'>Chat</h1>
-        </div> */}
-
         {/* Vùng hiển thị tin nhắn */}
         <div className='flex-1 overflow-y-auto p-4'>
           {messages.map((msg, index) => (
