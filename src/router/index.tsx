@@ -1,3 +1,5 @@
+import ChatLayout from '@/components/chat-layout'
+import ChatLayoutMessage from '@/components/chat-layout/chat-layout-message'
 import AuthLayout from '@/layouts/auth-layout'
 import HomePage from '@/pages/home'
 import SignIn from '@/pages/sign-in'
@@ -8,6 +10,16 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePage />,
+    children: [
+      {
+        index: true,
+        element: <ChatLayout />,
+      },
+      {
+        path: 'chat/:chat_id',
+        element: <ChatLayoutMessage />,
+      },
+    ],
   },
   {
     path: '/',

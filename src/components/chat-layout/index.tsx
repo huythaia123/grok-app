@@ -41,14 +41,18 @@ const ChatLayout = () => {
       </div>
 
       {/* textarea */}
-      <div className='w-full max-w-2xl rounded-2xl border bg-white p-1 shadow-sm focus-within:ring focus-within:ring-gray-400 hover:ring hover:ring-gray-300 sm:p-2 lg:w-4/5'>
+      <div className='w-full max-w-[800px] rounded-2xl border bg-white p-1 shadow-sm focus-within:ring focus-within:ring-gray-400 hover:ring hover:ring-gray-300 sm:p-2 lg:w-4xl'>
         <div>
           <Textarea className='max-h-80 w-full resize-none border-none shadow-none focus:outline-none focus-visible:ring-0' />
         </div>
 
         <div className='flex justify-between gap-2'>
-          <Button variant={'outline'} className='rounded-full'>
-            <PaperclipIcon className='size-5' />
+          <Button
+            variant={'outline'}
+            className='relative size-9 rounded-full'
+            disabled
+          >
+            <PaperclipIcon className='absolute top-1/2 left-1/2 size-5 -translate-1/2' />
           </Button>
 
           <div className='flex flex-1 justify-between'>
@@ -85,8 +89,8 @@ const ChatLayout = () => {
               }
             />
           </div>
-          <Button className='rounded-full' disabled>
-            <ArrowUpIcon className='size-5' />
+          <Button className='relative size-9 rounded-full' variant={'outline'}>
+            <ArrowUpIcon className='absolute top-1/2 left-1/2 size-5 -translate-1/2' />
           </Button>
         </div>
       </div>
